@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="index.css">
+
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <h1>COUNTER</h1>
+
+    <h2 id="count-el">0</h2>
+
+    <div class="marign">
+
+        <button id="increment-btn" onclick="increment()">INCREMENT</button>
+        
+    </div>
+    
+    <div class="margintop">
+
+        <button id="increment-btn" onclick="decrease()">DECREASEMENT</button>
+
+    </div>
+    
+    <div id="reset-style">
+
+        <button id="save-btn" onclick="save()">SAVE</button>
+
+    </div>
+
+    <p id="save-el">Previous Count: </p>    
+
+    <style>
+    *{
+
+    font-family: Arial;
+
+    align-items: center;
+
+    justify-items: center;
+
+    text-align: center;
+    
+    background-color: black;
+
+}
+
+
+.margintop{
+    margin-top: 7px;
+}
+
+
+h1{
+
+    font-weight: bold;
+
+    font-size: 42pt;
+
+}
+
+
+
+h2{
+
+    font-weight: bold;
+
+    font-size: 60pt;
+
+}
+
+
+
+h1, h2{
+
+    color: white;
+
+}
+
+
+
+button{
+
+    border: none;
+
+    padding-top: 10px;
+
+    padding-bottom: 10px;
+
+    color: white;
+
+    font-weight: bold;
+
+    width: 250px;
+
+    border-radius: 5px;
+
+}
+
+
+#increment-btn {
+
+    border: solid 5px white;
+
+    background-color: darkred;
+
+}
+
+#increment-btn:hover, #save-btn:hover {
+    background-color: green;
+}
+
+
+#reset-btn {
+
+    border: solid 5px white;
+
+    background-color: darkred;
+
+}
+
+
+#save-btn {
+
+    border: solid 5px white;
+
+    background-color: darkred;
+
+}
+
+
+#reset-style{
+    margin-top: 2em;
+}
+
+
+p{
+
+    color: white;
+
+    font-weight: bold;
+
+    font-size: 36pt;
+
+    text-shadow: 5px;
+
+}
+
+    </style>
+    
+    <script>
+    let saveEl = document.getElementById("save-el")
+
+    let countEl = document.getElementById("count-el")
+
+
+
+
+
+console.log(countEl)
+
+    let count = 0
+
+function increment() {
+
+    count += 1
+
+    countEl.innerText = count
+
+}
+
+
+function decrease() {
+
+    count -= 1
+
+    countEl.innerText = count
+
+}
+
+
+
+function save() {
+
+    let countStr = count + " - " 
+
+    saveEl.innerText += countStr
+
+    console.log(count)
+
+}
+
+
+    </script>
+
+</body>
+
+</html>
